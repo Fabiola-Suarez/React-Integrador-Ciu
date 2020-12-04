@@ -14,7 +14,8 @@ const List = () => {
         error: "",
     });
 
-//Llamo a la api para que me traigas las peliculas
+//Llamo a la api para que me traiga una peliculas que va a quedar siempre
+//al abrir la api.
     
     const traerPeliculaSerie = async() => {
     
@@ -28,7 +29,8 @@ const List = () => {
             })
         }
     };    
-        
+//Hook para cambiar el estado de las peliculas.
+
         useEffect(()=> {
             traerPeliculaSerie();
         },[])
@@ -54,6 +56,9 @@ const List = () => {
             error: "",
         });
     };
+
+//Armo un condicional para que si la pelicula tarda en mostrarse en pantalla
+//de un aviso que que esta se esta buscando.absolute
 
     const{data, cargando} = state;
 

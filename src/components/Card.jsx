@@ -1,6 +1,8 @@
-import { Card, Button} from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PropTypes from "prop-types";
+
+
 
 
 const PeliculaCard = ({movie}) => (
@@ -14,17 +16,9 @@ const PeliculaCard = ({movie}) => (
                 />
             <Card.Body>
                 <Card.Title>{`${movie.Title}`}</Card.Title>
+                <p>{`Año de estreno:${movie.Year}`}</p>
                 <p>{`Type:${movie.Type}`}</p>
-                <Button 
-                    variant="warning"
-                    size ="sm"
-                    style={{border:'2px solid black',borderRadius:'6px',fontSize:'19px',fontFamily:'Arial'}}
-                >
-                Ver reseña
-                </Button>
-                
             </Card.Body>
-
         </Card>
     </div>   
 );
@@ -36,6 +30,7 @@ Card.propTypes ={
     id: PropTypes.string,
     Title: PropTypes.string,
     Poster: PropTypes.string,
+    Year: PropTypes.string,
     Type: PropTypes.string,
     }).isRequired,
 };
