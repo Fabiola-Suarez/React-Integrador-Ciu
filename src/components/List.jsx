@@ -29,7 +29,7 @@ const List = () => {
             })
         }
     };    
-//Hook para cambiar el estado de las peliculas.
+//Efecto para cambiar el estado de las peliculas.
 
         useEffect(()=> {
             traerPeliculaSerie();
